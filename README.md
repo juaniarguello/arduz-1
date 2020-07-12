@@ -10,7 +10,7 @@ Arduz Online was developed by @menduz
 
 Arduz is a "click & play" style game given after the modification of the Argentine game Argentum Online. It was developed during 2008 from version 12.1, which underwent severe modifications to give rise to a video game integrated into a web page. Although it is primarily an internet game, there is the possibility of playing it via LAN between 2 or more computers.  
 
-## Game Development
+## In-Game Development
 
 The activity of the game takes place through different maps where players can choose sides (red or blue) and must fulfill the characteristic mission of the map (usually being the destruction of the opposing team). Each player can open their own mini-server and gain administrator powers to organize their game.
 
