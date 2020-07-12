@@ -4,6 +4,8 @@
 Arduz online is a mod of Argentum Online (The first Argentinian MMORPG , developed by Pablo Márquez and Fernando Testa). 
 Arduz Online was developed by @menduz
 
+![Arduz online](https://github.com/juaniarguello/arduz-1/blob/master/arduz.jpg)
+
 ## Arduz Online 2008
 
 Arduz is a "click & play" style game given after the modification of the Argentine game Argentum Online. It was developed during 2008 from version 12.1, which underwent severe modifications to give rise to a video game integrated into a web page. Although it is primarily an internet game, there is the possibility of playing it via LAN between 2 or more computers.  
