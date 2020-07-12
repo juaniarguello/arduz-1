@@ -51,32 +51,14 @@ Begin VB.Form frmConnect
       TabIndex        =   3
       Top             =   3720
       Width           =   5415
-      _ExtentX        =   6588
-      _ExtentY        =   4471
-      ColorSombra     =   8421504
-      ColorLabel      =   7506330
-      ColorDireccion  =   12632256
-      ColorFondo      =   0
-      BeginProperty TipoLetraLabels {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "Tahoma"
-         Size            =   9
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      BeginProperty TipoLetraDireccion {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "Tahoma"
-         Size            =   8.25
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      PunteroItems    =   0
-      PunteroImagenItems=   "frmConnect.frx":59CE6
+      _extentx        =   6588
+      _extenty        =   4471
+      colorsombra     =   8421504
+      colorlabel      =   7506330
+      colordireccion  =   12632256
+      colorfondo      =   0
+      tipoletralabels =   "frmConnect.frx":59CE6
+      tipoletradireccion=   "frmConnect.frx":59D0C
    End
    Begin VB.TextBox PortTxt 
       Alignment       =   2  'Center
@@ -138,25 +120,16 @@ Begin VB.Form frmConnect
       Height          =   1380
       Index           =   1
       Left            =   3120
-      MouseIcon       =   "frmConnect.frx":59D02
+      MouseIcon       =   "frmConnect.frx":59D34
       MousePointer    =   99  'Custom
       ToolTipText     =   "Click para ir a la web."
       Top             =   720
       Width           =   5970
    End
-   Begin VB.Image Image8 
-      Height          =   300
-      Index           =   0
-      Left            =   240
-      MouseIcon       =   "frmConnect.frx":59E54
-      MousePointer    =   99  'Custom
-      Top             =   8400
-      Width           =   3570
-   End
    Begin VB.Image Image7 
       Height          =   420
       Left            =   240
-      MouseIcon       =   "frmConnect.frx":59FA6
+      MouseIcon       =   "frmConnect.frx":59E86
       MousePointer    =   99  'Custom
       Top             =   7440
       Width           =   1170
@@ -164,7 +137,7 @@ Begin VB.Form frmConnect
    Begin VB.Image Image6 
       Height          =   420
       Left            =   240
-      MouseIcon       =   "frmConnect.frx":5A0F8
+      MouseIcon       =   "frmConnect.frx":59FD8
       MousePointer    =   99  'Custom
       Top             =   6600
       Width           =   1290
@@ -172,7 +145,7 @@ Begin VB.Form frmConnect
    Begin VB.Image Image5 
       Height          =   420
       Left            =   240
-      MouseIcon       =   "frmConnect.frx":5A24A
+      MouseIcon       =   "frmConnect.frx":5A12A
       MousePointer    =   99  'Custom
       Top             =   5760
       Width           =   2730
@@ -180,7 +153,7 @@ Begin VB.Form frmConnect
    Begin VB.Image Actualizar 
       Height          =   420
       Left            =   6120
-      MouseIcon       =   "frmConnect.frx":5A39C
+      MouseIcon       =   "frmConnect.frx":5A27C
       MousePointer    =   99  'Custom
       Top             =   8160
       Width           =   2490
@@ -188,7 +161,7 @@ Begin VB.Form frmConnect
    Begin VB.Image Image3 
       Height          =   420
       Left            =   240
-      MouseIcon       =   "frmConnect.frx":5A4EE
+      MouseIcon       =   "frmConnect.frx":5A3CE
       MousePointer    =   99  'Custom
       Top             =   5280
       Width           =   3090
@@ -196,7 +169,7 @@ Begin VB.Form frmConnect
    Begin VB.Image Image2 
       Height          =   420
       Left            =   9240
-      MouseIcon       =   "frmConnect.frx":5A640
+      MouseIcon       =   "frmConnect.frx":5A520
       MousePointer    =   99  'Custom
       Top             =   8160
       Width           =   2250
@@ -304,7 +277,8 @@ Private Sub Form_Load()
 End Sub
 
 Private Sub Image1_Click(index As Integer)
-Call ShellExecute(0, "Open", "http://ao.noicoder.com/index.php?a=mi_cuenta", "", App.path, 0)
+'Call ShellExecute(0, "Open", "http://ao.noicoder.com/index.php?a=mi_cuenta", "", App.path, 0)
+MsgBox ("No disponible")
 End Sub
 
 Private Sub Image2_Click()
@@ -326,12 +300,13 @@ Call MsgBox("No se encuentra el programa Server.exe", vbCritical, "Arduz Online"
 End Sub
 
 Private Sub Image5_Click()
-Call ShellExecute(0, "Open", "http://ao.noicoder.com/?a=ranking", "", App.path, 0)
+'Call ShellExecute(0, "Open", "http://ao.noicoder.com/?a=ranking", "", App.path, 0)
+MsgBox ("El ranking no está disponible todavía")
 Exit Sub
 End Sub
 
 Private Sub Image6_Click()
-Call ShellExecute(0, "Open", "http://ao.noicoder.com/?a=ayuda", "", App.path, 0)
+Call ShellExecute(0, "Open", "https://github.com/juaniarguello/arduz-1", "", App.path, 0)
 End Sub
 
 Private Sub Image7_Click()
@@ -341,7 +316,7 @@ End Sub
 
 
 Private Sub Image8_Click(index As Integer)
-Call ShellExecute(0, "Open", "http://ao.noicoder.com/", "", App.path, 0)
+Call ShellExecute(0, "Open", "https://github.com/juaniarguello/arduz-1", "", App.path, 0)
 End Sub
 
 Private Sub Inet1_StateChanged(ByVal State As Integer)
@@ -391,6 +366,10 @@ On Error Resume Next
 'pin = PingIp(ipsv, 115, 0)
 'Debug.Print pin
 lsts.AddItem nombresv, ipsv, portsv, mapasv, "-1", jugadoressv
+End Sub
+
+Private Sub lblStatus_Click()
+
 End Sub
 
 Private Sub lsts_Click(index As Integer, Item As String, direccion As String, Puerto As Long)
